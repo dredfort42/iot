@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dredfort
+  labels:
+    app: dredfort
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dredfort
+  template:
+    metadata:
+      labels:
+        app: dredfort
+    spec:
+      containers:
+      - name: dredfort
+        image: dredfort/iot:latest
+        ports:
+        - containerPort: 8080
