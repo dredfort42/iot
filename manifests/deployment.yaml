@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dredfort
+  namespace: dev
   labels:
     app: dredfort
 spec:
@@ -16,6 +17,6 @@ spec:
     spec:
       containers:
       - name: dredfort
-        image: dredfort/iot:latest
+        image: dredfort/iot:v1
         ports:
-        - containerPort: 8080
+        - containerPort: 8888

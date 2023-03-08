@@ -5,11 +5,10 @@ metadata:
   name: dredfort-svc
   namespace: dev
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: dredfort
   ports:
-  - port: 8080
+  - port: 8888
     protocol: TCP
-    targetPort: 8080
-    nodePort: 30080
+    targetPort: 8888
