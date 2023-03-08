@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: dredfort
-        image: dredfort/iot:v3
+        image: dredfort/iot:v1
         ports:
         - containerPort: 8888
